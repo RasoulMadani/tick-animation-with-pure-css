@@ -1,0 +1,77 @@
+@charset "UTF-8";
+* {
+  padding: 0px;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  width: 400px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.box > span {
+  display: flex;
+  height: 5px;
+  background-color: #a6dd97;
+  position: absolute;
+}
+.box > span:nth-of-type(1) {
+  width: 60px;
+  transform-origin: top left;
+  transform: rotate(45deg) translateX(-150px);
+  opacity: 0;
+  border-radius: 0 0 25% 0;
+  animation: span1 0.2s linear forwards 0.8s;
+}
+.box > span:nth-of-type(2) {
+  width: 0px;
+  transform-origin: left;
+  top: 56%;
+  left: 49%;
+  transform: rotate(-45deg);
+  animation: span2 linear 0.4s 1s forwards;
+}
+.box > .circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 0.1px solid #a6dd97;
+  opacity: 0;
+  animation: anime1 0.1s 0.5s linear forwards;
+  background-image: url(./img/عکس-سردار-سلیمانی-برای-پروفایل-89.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@keyframes anime1 {
+  to {
+    transform: scale(5);
+    width: 50px;
+    height: 50px;
+    opacity: 0.3;
+  }
+}
+@keyframes span1 {
+  to {
+    opacity: 1;
+    transform: rotate(45deg) translateX(-19px);
+  }
+}
+@keyframes span2 {
+  to {
+    width: 100px;
+  }
+}/*# sourceMappingURL=style.css.map */
